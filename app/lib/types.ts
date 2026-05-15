@@ -76,6 +76,13 @@ export interface BriefingPoint {
   detail: string;
 }
 
+export interface Mover {
+  symbol: string;
+  name: string;
+  price: number;
+  changePercent: number;
+}
+
 export interface NewsItem {
   title: string;
   link: string;

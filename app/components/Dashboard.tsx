@@ -16,6 +16,7 @@ import EMICalculator from './EMICalculator';
 import TaxCalculator from './TaxCalculator';
 import OpportunityFeed from './OpportunityFeed';
 import MarketNews from './MarketNews';
+import MarketMovers from './MarketMovers';
 import Link from 'next/link';
 import { RefreshCw, AlertCircle, ChevronDown, ChevronUp, MessageCircle } from 'lucide-react';
 
@@ -103,10 +104,13 @@ export default function Dashboard() {
           {/* 2. Compact market ticker */}
           <MarketTicker snapshot={data.snapshot} />
 
-          {/* 3. Live Investment Opportunities */}
+          {/* 3. Top Gainers / Top Losers */}
+          <MarketMovers />
+
+          {/* 4. Live Investment Opportunities */}
           <OpportunityFeed opportunities={data.opportunities ?? []} />
 
-          {/* 4. Bullion + Briefing */}
+          {/* 5. Bullion + Briefing */}
           <div className="two-col">
             <BullionCard bullion={data.bullion} />
             <DailyBriefing points={data.briefing} />
