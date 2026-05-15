@@ -824,6 +824,327 @@
   .sip-chart { margin: 0 -0.2rem; }
   .sip-note { font-size: 0.68rem; color: var(--text-3); line-height: 1.5; border-top: 1px solid var(--border); padding-top: 0.6rem; }
 
+  /* ── Opportunity Feed ───────────────────────── */
+  .opp-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+  .opp-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .opp-header-icon { color: #f59e0b; }
+  .opp-live-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #22c55e;
+    margin-left: 0.15rem;
+    animation: rp-pulse 2s ease-in-out infinite;
+  }
+  .opp-live-label { font-size: 0.65rem; font-weight: 700; color: #22c55e; letter-spacing: 0.05em; }
+  .opp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  .opp-card {
+    background-color: var(--bg-card);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border);
+    border-radius: 14px;
+    padding: 0.9rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    box-shadow: var(--shadow);
+  }
+  .opp-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+  }
+  .opp-type-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.18rem 0.5rem;
+    border-radius: 99px;
+    letter-spacing: 0.04em;
+  }
+  .opp-urgency {
+    font-size: 0.6rem;
+    font-weight: 800;
+    padding: 0.18rem 0.5rem;
+    border-radius: 99px;
+    letter-spacing: 0.06em;
+  }
+  .opp-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--text);
+    margin: 0;
+  }
+  .opp-detail {
+    font-size: 0.74rem;
+    color: var(--text-2);
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+  }
+  .opp-action {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent);
+    background-color: rgba(99,102,241,0.1);
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    align-self: flex-start;
+    margin-top: 0.15rem;
+  }
+
+  /* ── Market News ─────────────────────────────── */
+  .news-card {
+    background-color: var(--bg-card);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border);
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .news-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .news-title-row { display: flex; align-items: center; gap: 0.4rem; }
+  .news-icon { color: var(--text-3); }
+  .news-source-note { font-size: 0.65rem; color: var(--text-3); }
+  .news-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
+  .news-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.6rem 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--border);
+  }
+  .news-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .news-bullet {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+  .news-content { display: flex; flex-direction: column; gap: 0.2rem; flex: 1; min-width: 0; }
+  .news-headline {
+    font-size: 0.825rem;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    line-height: 1.45;
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    transition: color 0.1s;
+  }
+  .news-headline:hover { color: var(--accent); }
+  .news-ext-icon { flex-shrink: 0; color: var(--text-3); }
+  .news-meta { font-size: 0.68rem; color: var(--text-3); }
+  .news-skeleton { display: flex; flex-direction: column; gap: 0.5rem; }
+  .news-skeleton-item {
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--bg-card2);
+    animation: rp-pulse 1.4s ease-in-out infinite;
+  }
+  .news-empty { font-size: 0.8rem; color: var(--text-3); text-align: center; padding: 1rem; }
+
+  /* ── EMI Calculator ──────────────────────────── */
+  .emi-card {
+    background-color: var(--bg-card);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border);
+    border-radius: 14px;
+    padding: 1.1rem 1.2rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .emi-header { display: flex; align-items: center; gap: 0.45rem; }
+  .emi-icon { color: var(--accent); }
+  .emi-presets { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .emi-preset-btn {
+    padding: 0.3rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.76rem;
+    font-weight: 500;
+    background-color: var(--bg-card2);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border);
+    color: var(--text-2);
+    cursor: pointer;
+    font-family: inherit;
+    transition: border-color 0.1s, color 0.1s;
+  }
+  .emi-preset-active { font-weight: 700; background-color: transparent; }
+  .emi-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+  }
+  .emi-fields > .emi-field:last-child { grid-column: 1 / -1; }
+  .emi-field { display: flex; flex-direction: column; gap: 0.3rem; }
+  .emi-field label { font-size: 0.76rem; color: var(--text-3); font-weight: 500; }
+  .emi-input-wrap {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-input);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border);
+    border-radius: 8px;
+    padding: 0 0.75rem;
+    gap: 0.3rem;
+  }
+  .emi-prefix, .emi-suffix { color: var(--text-3); font-size: 0.88rem; flex-shrink: 0; }
+  .emi-input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--text);
+    font-family: inherit;
+    width: 100%;
+  }
+  .emi-result-card {
+    background-color: var(--bg-card2);
+    border-radius: 12px;
+    padding: 1rem 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .emi-result-main { display: flex; flex-direction: column; gap: 0.15rem; }
+  .emi-result-label { font-size: 0.75rem; color: var(--text-3); }
+  .emi-result-value { font-size: 1.7rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1; }
+  .emi-result-breakdown { display: flex; align-items: center; gap: 1rem; }
+  .emi-bd-item { display: flex; flex-direction: column; gap: 0.12rem; }
+  .emi-bd-label { font-size: 0.7rem; color: var(--text-3); }
+  .emi-bd-val { font-size: 0.88rem; font-weight: 700; }
+  .emi-split { display: flex; flex-direction: column; gap: 0.4rem; }
+  .emi-split-bar {
+    display: flex;
+    height: 8px;
+    border-radius: 99px;
+    overflow: hidden;
+    background-color: var(--border);
+  }
+  .emi-split-principal { background-color: var(--accent); border-radius: 99px 0 0 99px; }
+  .emi-split-interest  { background-color: #ef4444; border-radius: 0 99px 99px 0; flex: 1; }
+  .emi-split-legend { display: flex; gap: 1rem; }
+  .emi-legend-item { display: flex; align-items: center; gap: 0.3rem; font-size: 0.72rem; color: var(--text-2); }
+  .emi-legend-item::before { content: ''; width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+  .emi-legend-principal::before { background-color: var(--accent); }
+  .emi-legend-interest::before  { background-color: #ef4444; }
+
+  /* ── Tax Calculator ──────────────────────────── */
+  .tax-card {
+    background-color: var(--bg-card);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border);
+    border-radius: 14px;
+    padding: 1.1rem 1.2rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .tax-header { display: flex; align-items: center; gap: 0.45rem; }
+  .tax-icon { color: var(--text-3); }
+  .tax-fy-badge {
+    margin-left: auto;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--accent);
+    background-color: rgba(99,102,241,0.1);
+    padding: 0.18rem 0.55rem;
+    border-radius: 99px;
+  }
+  .tax-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+  }
+  .tax-inputs > .emi-field:first-child { grid-column: 1 / -1; }
+  .tax-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .tax-regime-card {
+    background-color: var(--bg-card2);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border);
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    position: relative;
+  }
+  .tax-regime-winner {
+    border-color: #22c55e;
+    background-color: rgba(34,197,94,0.05);
+  }
+  .tax-winner-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: #16a34a;
+    margin-bottom: 0.15rem;
+  }
+  .tax-regime-name { font-size: 0.72rem; font-weight: 700; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.05em; }
+  .tax-regime-tax { font-size: 1.5rem; font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; }
+  .tax-regime-note { font-size: 0.68rem; color: var(--text-3); line-height: 1.4; }
+  .tax-regime-zero { font-size: 0.7rem; font-weight: 700; color: #22c55e; margin-top: 0.1rem; }
+  .tax-save-banner {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0.85rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .tax-save-positive {
+    background-color: rgba(34,197,94,0.1);
+    color: #16a34a;
+  }
+  .tax-save-negative {
+    background-color: rgba(99,102,241,0.1);
+    color: var(--accent);
+  }
+
   /* ── Chat page ───────────────────────────────── */
   .chat-page {
     display: flex;
@@ -1053,6 +1374,17 @@
   .watchlist-table td { padding: 0.55rem 0.6rem; }
   .wl-col-cat   { display: none; }
   .wl-col-alert { display: none; }
+
+  /* ── Opportunities ─────────────────────────── */
+  .opp-grid     { grid-template-columns: 1fr; }
+
+  /* ── EMI & Tax ─────────────────────────────── */
+  .emi-fields   { grid-template-columns: 1fr; }
+  .emi-fields > .emi-field:last-child { grid-column: 1; }
+  .emi-result-card { flex-direction: column; align-items: flex-start; gap: 0.65rem; }
+  .tax-inputs   { grid-template-columns: 1fr; }
+  .tax-inputs > .emi-field:first-child { grid-column: 1; }
+  .tax-compare  { grid-template-columns: 1fr 1fr; }
 
   /* ── Chat ──────────────────────────────────── */
   /* 56px top nav + 56px bottom nav + page padding */

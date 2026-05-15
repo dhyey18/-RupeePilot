@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import {
   getMarketSnapshot, scoreAssets, getEconomicIndicators,
   getAhmedabadBullionRates, generateTodayVerdict, generateBriefingPoints,
+  detectOpportunities,
 } from '@/app/lib/market';
 import { generateAIBriefing, generateAIVerdict } from '@/app/lib/ai';
 
@@ -26,7 +27,8 @@ export async function GET() {
       briefing = generateBriefingPoints(snapshot, scores);
     }
 
-    return NextResponse.json({ snapshot, scores, indicators, bullion, verdict, briefing });
+    const opportunities = detectOpportunities(snapshot, bullion);
+    return NextResponse.json({ snapshot, scores, indicators, bullion, verdict, briefing, opportunities });
   } catch (err) {
     console.error('Market fetch error:', err);
     return NextResponse.json({ error: 'Failed to fetch market data' }, { status: 500 });

@@ -76,6 +76,24 @@ export interface BriefingPoint {
   detail: string;
 }
 
+export interface NewsItem {
+  title: string;
+  link: string;
+  publisher: string;
+  providerPublishTime: number;
+}
+
+export type OpportunityType = 'equity' | 'gold' | 'fd' | 'fx' | 'debt';
+
+export interface Opportunity {
+  id: string;
+  title: string;
+  detail: string;
+  type: OpportunityType;
+  urgency: 'high' | 'medium' | 'low';
+  action: string;
+}
+
 export type VerdictAction = 'invest_now' | 'wait' | 'hold' | 'rebalance' | 'sip_day';
 
 export interface TodayVerdict {
